@@ -1,0 +1,190 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('collage3.jpg') center/cover no-repeat;
+}
+
+
+#time
+{
+     display: flex;
+    gap: 30px;
+    backdrop-filter: blur(10px); /* Adjust the blur value for the glass effect */
+    background: rgba(26, 26, 26, 0.1); /* Adjust the alpha value for transparency */
+    border-radius: 20px; /* Adjust the border-radius for rounded corners */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Adjust the shadow for a subtle lift */
+    padding: 20px;
+
+    width: 735px;
+    height: 200px;
+
+    position: relative;
+}
+
+#time .circle
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+}
+#time .circle svg circle
+{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: rgb(29, 29, 29);
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    -webkit-transform: translate(5px, 5px);
+    -moz-transform: translate(5px, 5px);
+    -ms-transform: translate(5px, 5px);
+    -o-transform: translate(5px, 5px);
+}
+#time .circle svg circle:nth-child(2)
+{
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 400;
+}
+#time div
+{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.5em;
+}
+#time div span
+{
+    position: absolute;
+    transform: translateX(-50%) translateY(-1px);
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    -webkit-transform: translateX(-50%) translateY(-1px);
+    -moz-transform: translateX(-50%) translateY(-1px);
+    -ms-transform: translateX(-50%) translateY(-1px);
+    -o-transform: translateX(-50%) translateY(-1px);
+}
+#time .dots
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+}
+#time .dots::before
+{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--clr),    0 0 20px var(--clr);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+    50% {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+}
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+
+.message {
+    font-size: 24px;
+    font-weight: 10;
+    text-align: center;
+    color: #ededed;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.newYear
+{
+       font-size: 7em;
+       font-weight: 500;
+       color: #e8e8e8;
+       text-align: center;
+       line-height: 1.4em;
+       display: none;
+       animation: floatAnimation 6s infinite;
+       /*Adjustthedurationandotherpropertiesasneeded*//*Addtheglassmorphismstylesbelow*/
+       background: rgba(207, 124, 124, 0.2);
+       border-radius: 15px;
+       padding: 80px;
+       backdrop-filter: blur(10px);
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       margin-top: 20px;
+       -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+       -ms-border-radius: 15px;
+       -o-border-radius: 15px;
+       -webkit-animation: floatAnimation 6s infinite;
+}
+.newYear span
+{
+    font-size: 0.9em;
+    font-weight: 400;
+    
+}
